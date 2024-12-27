@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>会員登録 - HOKKOKU Honey Bee ISHIKAWA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d9f0eb;
+        }
+        header {
+            background-color: #246355;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            font-size: 20px;
+            color: #246355;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #246355;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #246355;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1b4e43;
+        }
+        a {
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+            color: #246355;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HOKKOKU Honey Bee ISHIKAWA</h1>
+    </header>
+    <main>
+        <h2>会員登録</h2>
+        <form method="POST" action="/register">
+            <label for="first_name">名:</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <label for="last_name">姓:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">登録</button>
+        </form>
+        <a href="/login">ログインはこちら</a>
+    </main>
+</body>
+</html>
